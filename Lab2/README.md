@@ -19,20 +19,13 @@ This project demonstrates the implementation of a validation framework for Java 
 - **Manual Validation**: Demonstrates manual validation as a baseline for performance comparison.
 - **Performance Metrics**: Compares the execution time of manual and reflection-based validation.
 
-## Project Structure
-```
-project/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   ├── com/project/anotation/      # Custom annotations
-│   │   │   ├── com/project/model/          # Model classes (User, Product, Order)
-│   │   │   ├── com/project/util/           # Validation utilities
-│   │   │   └── com/project/                # Main class
-│   └── test/                               # Test cases (if any)
-├── README.md                               # Project documentation
-└── pom.xml                                 # Maven build file
-```
+### Project Structure
+
+The project consists of the following main components:
+- **Annotation Classes**: Define custom annotations for field validation (@NotNull, @StringLength, @NumberRange).
+- **Model Classes**: Represent domain entities such as User, Product, and Order, annotated for validation.
+- **Utility Classes**: Provide the core validation logic using reflection and manual approaches.
+- **Main Class**: Contains the entry point to demonstrate validation and compare performance.
 
 ## Requirements
 - **Java 17 or later**
