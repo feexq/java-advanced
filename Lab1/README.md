@@ -8,6 +8,8 @@
 
 **IA-23**
 
+Number in the group : 11
+
 ## Description
 
 This project simulates a collection of mythical creatures, each having attributes such as name, type, first mention date, and attack power. The main tasks include filtering, grouping, and analyzing these creatures. The creatures are categorized by types such as UPYR, MAVKA, DOMOVYK, and others, and various operations are performed to gather, analyze, and display statistics about them.
@@ -27,7 +29,7 @@ The project consists of the following main components:
 ## Requirements
 
 - Java 23 
-- Maven (or any build tool of your choice)
+- Maven 3.9.9 or later
 
 ## How to Build and Run
 
@@ -42,16 +44,14 @@ Navigate to lab folder
 cd java-advanced/lab1
 ```
 
-### Step 2: Compile the project
-
+### Step 2: Building Project
 Navigate to the project directory and run the following command to compile the project:
 
 ```bash
 mvn clean install
 ```
 
-### Step 3: Building Project
-
+### Step 3: Compile the project
 Compile project with maven
 ```bash
 mvn compile

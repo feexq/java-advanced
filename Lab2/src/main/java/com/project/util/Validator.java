@@ -8,7 +8,18 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Utility class for reflection-based validation.
+ */
 public class Validator {
+
+    /**
+     * Validates an object using reflection and annotations.
+     *
+     * @param object the object to validate.
+     * @param <T> the type of the object.
+     * @return a list of validation error messages.
+     */
     public static <T> List<String> validate(T object) {
         List<String> validationErrors = new ArrayList<>();
 
