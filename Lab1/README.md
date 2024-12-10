@@ -25,7 +25,7 @@ The project consists of the following main components:
 - **Tasks**: Contain the main operations (e.g., grouping by type, analyzing attack power, etc.).
 
 ## Requirements
-***
+
 - Java 23 
 - Maven (or any build tool of your choice)
 
@@ -34,8 +34,14 @@ The project consists of the following main components:
 ### Step 1: Clone the repository
 Clone the repository to your local machine:
 ```bash
-https://github.com/feexq/java-advanced.git
+git clone https://github.com/feexq/java-advanced.git
 ```
+
+Navigate to lab folder
+```bash
+cd java-advanced/lab1
+```
+
 ### Step 2: Compile the project
 
 Navigate to the project directory and run the following command to compile the project:
