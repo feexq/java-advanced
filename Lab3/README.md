@@ -58,14 +58,9 @@ cd model
 ```
 
 ### Step 4: Run the Application
-1. Compile Java files using:
+1. Run the application
 ```bash
-javac -d bin src/main/java/com/project/*
-```
-
-2. Run the application
-```bash
- java -cp bin com.project.PerformanceComparison
+ java -cp target/model-1.0-SNAPSHOT.jar com.project.Main
 ```
 This will start the program and perform the tasks defined in the Main class.
 
