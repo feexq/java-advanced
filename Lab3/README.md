@@ -51,6 +51,11 @@ Navigate to the project directory and run the following command to compile the p
 mvn clean install
 ```
 
+After building generated Validators will be in 
+```bash
+model\target\generated-sources\annotations\com\project\model
+```
+
 ### Step 3: Open work directory
 
 ```bash
