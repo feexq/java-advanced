@@ -6,7 +6,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Анотація для генерації класу із заданими полями.
+ * Annotation to generate a validator for a class.
+ * This annotation should be applied to class definitions.
  */
 @Retention(RetentionPolicy.SOURCE)
 @Target(ElementType.TYPE)

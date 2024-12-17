@@ -1,5 +1,12 @@
+package com.project;
+
 import com.project.model.*;
 
+/**
+ * A demo class to test the generated validation logic.
+ * Uses the User, Product, and Order models to validate their fields
+ * using custom annotations and an Annotation Processor.
+ */
 public class Main {
 
     public static void main(String[] args) {
@@ -10,8 +17,13 @@ public class Main {
         testOrderValidation();
     }
 
+    /**
+     * Validates the User model with different test cases.
+     */
     private static void testUserValidation() {
         System.out.println("User Validation Tests:");
+
+        // Valid User Test
         try {
             User user = new User();
             user.setUsername("JohnDoe");
@@ -21,6 +33,8 @@ public class Main {
         } catch (IllegalArgumentException e) {
             System.out.println("Validation error: " + e.getMessage());
         }
+
+        // Invalid Username Test (too short)
         try {
             User invalidUser1 = new User();
             invalidUser1.setUsername("Hi");
@@ -29,6 +43,8 @@ public class Main {
         } catch (IllegalArgumentException e) {
             System.out.println("Validation error for short username: " + e.getMessage());
         }
+
+        // Invalid Age Test (underage)
         try {
             User invalidUser2 = new User();
             invalidUser2.setUsername("JohnDoe");
@@ -39,9 +55,13 @@ public class Main {
         }
     }
 
+    /**
+     * Validates the Product model with different test cases.
+     */
     private static void testProductValidation() {
         System.out.println("\nProduct Validation Tests:");
 
+        // Valid Product Test
         try {
             Product validProduct = new Product();
             validProduct.setName("Laptop");
@@ -51,6 +71,8 @@ public class Main {
         } catch (IllegalArgumentException e) {
             System.out.println("Unexpected validation error: " + e.getMessage());
         }
+
+        // Invalid Product Test (null name)
         try {
             Product nullNameProduct = new Product();
             nullNameProduct.setName(null);
@@ -61,7 +83,7 @@ public class Main {
             System.out.println("Caught expected error: " + e.getMessage());
         }
 
-
+        // Invalid Product Test (price out of range)
         try {
             Product invalidPriceProduct = new Product();
             invalidPriceProduct.setName("Smartphone");
@@ -73,9 +95,13 @@ public class Main {
         }
     }
 
+    /**
+     * Validates the Order model with different test cases.
+     */
     private static void testOrderValidation() {
         System.out.println("\nOrder Validation Tests:");
 
+        // Valid Order Test
         try {
             Order validOrder = new Order();
             validOrder.setOrderId("ORD12345");
@@ -86,6 +112,7 @@ public class Main {
             System.out.println("Unexpected validation error: " + e.getMessage());
         }
 
+        // Invalid Order Test (short ID)
         try {
             Order shortIdOrder = new Order();
             shortIdOrder.setOrderId("ORD1");
@@ -96,6 +123,7 @@ public class Main {
             System.out.println("Caught expected error: " + e.getMessage());
         }
 
+        // Invalid Order Test (quantity out of range)
         try {
             Order invalidQuantityOrder = new Order();
             invalidQuantityOrder.setOrderId("ORD12345");
