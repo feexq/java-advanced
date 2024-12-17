@@ -18,7 +18,7 @@ public class ManualValidator {
             throw new IllegalArgumentException("Invalid username");
         }
 
-        if (user.getAge() == null || user.getAge() < 18 || user.getAge() > 120) {
+        if (user.getAge() < 18 || user.getAge() > 120) {
             throw new IllegalArgumentException("Invalid age");
         }
     }

@@ -1,12 +1,11 @@
 package com.project.model;
 
+import com.project.annotation.GenerateValidator;
 import com.project.annotation.NotNull;
 import com.project.annotation.NumberRange;
 import com.project.annotation.StringLength;
 
-/**
- * Represents an order entity with validation annotations.
- */
+@GenerateValidator
 public class Order {
     @NotNull(message = "Order ID cannot be null")
     @StringLength(min = 5, max = 10)
@@ -15,14 +14,20 @@ public class Order {
     @NumberRange(min = 1, max = 100)
     private int quantity;
 
-    /**
-     * Constructs an Order instance.
-     *
-     * @param orderId the unique identifier of the order.
-     * @param quantity the quantity of items in the order.
-     */
-    public Order(String orderId, int quantity) {
+    public String getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(String orderId) {
         this.orderId = orderId;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
 }

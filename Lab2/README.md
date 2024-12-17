@@ -26,6 +26,7 @@ The project consists of the following main components:
 - **Model Classes**: Represent domain entities such as User, Product, and Order, annotated for validation.
 - **Utility Classes**: Provide the core validation logic using reflection and manual approaches.
 - **Main Class**: Contains the entry point to demonstrate validation and compare performance.
+- **Processor Class**: The ValidationProcessor class is an annotation processor that ensures the correct usage of custom validation annotations (@NotNull, @StringLength, @NumberRange).
 
 ## Requirements
 - **Java 17 or later**
@@ -58,7 +59,7 @@ mvn compile
 ### Step 4: Run the Application
 1. Compile Java files using:
 ```bash
-javac -d bin src/main/java/com/project/PerformanceComparison.java src/main/java/com/project/anotation/*.java src/main/java/com/project/model/*.java src/main/java/com/project/util/*.java 
+javac -d bin src/main/java/com/project/PerformanceComparison.java src/main/java/com/project/anotation/*.java src/main/java/com/project/model/*.java src/main/java/com/project/util/*.java src/main/java/com/project/processor/*
 ```
 2. Run the application
 ```bash
@@ -73,6 +74,7 @@ The application will display the following:
 2. Time taken for reflection-based validation.
 3. Time taken for manual validation.
 4. Detailed validation errors for `User`, `Product`, and `Order` objects.
+5. Errors for incorrect annotation usage: If an annotation is applied to an incorrect field type (e.g., @NotNull applied to a numeric field, @StringLength applied to a non-String field, or @NumberRange applied to a non-numeric field), the application will generate compile-time errors indicating the invalid usage.
 
 ## Example Output
 ```

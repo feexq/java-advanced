@@ -1,8 +1,8 @@
 package com.project.util;
 
-import com.project.anotation.NotNull;
-import com.project.anotation.NumberRange;
-import com.project.anotation.StringLength;
+import com.project.annotation.NotNull;
+import com.project.annotation.NumberRange;
+import com.project.annotation.StringLength;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
