@@ -2,7 +2,7 @@
 
 ## Author
 
-**Mozol Vlad**: [Your Name or Pseudonym]
+**Mozol Vlad**
 
 ## Group
 
