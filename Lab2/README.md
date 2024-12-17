@@ -59,7 +59,7 @@ mvn compile
 ### Step 4: Run the Application
 1. Compile Java files using:
 ```bash
-javac -d bin src/main/java/com/project/PerformanceComparison.java src/main/java/com/project/anotation/*.java src/main/java/com/project/model/*.java src/main/java/com/project/util/*.java src/main/java/com/project/processor/*
+javac -d bin src/main/java/com/project/PerformanceComparison.java src/main/java/com/project/annotation/*.java src/main/java/com/project/model/*.java src/main/java/com/project/util/*.java src/main/java/com/project/processor/*
 ```
 2. Run the application
 ```bash
